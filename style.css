@@ -1,0 +1,315 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(180deg,#050816,#101737,#24103c);
+overflow-x:hidden;
+color:white;
+}
+
+#loader{
+position:fixed;
+width:100%;
+height:100%;
+background:#050816;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:99999;
+animation:hideLoader 4s forwards;
+}
+
+.loader-heart{
+font-size:80px;
+animation:pulse 1s infinite;
+}
+
+#loader h2{
+font-family:'Great Vibes',cursive;
+font-size:55px;
+margin-top:20px;
+color:#ff7ab6;
+}
+
+#loader p{
+margin-top:10px;
+opacity:.8;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:70px;
+line-height:1.2;
+text-shadow:0 0 20px #ff6ab4;
+}
+
+.hero span{
+font-family:'Great Vibes',cursive;
+font-size:90px;
+color:#ff69b4;
+}
+
+.hero p{
+margin-top:20px;
+font-size:22px;
+opacity:.9;
+}
+
+.btn{
+margin-top:40px;
+padding:16px 45px;
+background:#ff4da6;
+color:white;
+border-radius:50px;
+text-decoration:none;
+font-size:20px;
+transition:.4s;
+}
+
+.btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 25px #ff4da6;
+}
+
+.photoCard{
+width:360px;
+margin:100px auto;
+background:white;
+padding:15px;
+border-radius:12px;
+box-shadow:0 0 30px rgba(255,255,255,.25);
+transform:rotate(-3deg);
+transition:.4s;
+}
+
+.photoCard:hover{
+transform:rotate(0deg) scale(1.05);
+}
+
+.photoCard img{
+width:100%;
+border-radius:8px;
+}
+
+.photoCard h2{
+color:#111;
+font-family:'Great Vibes',cursive;
+font-size:38px;
+margin-top:12px;
+}
+
+.counter{
+padding:80px 20px;
+text-align:center;
+}
+
+.counter h2{
+font-size:40px;
+margin-bottom:15px;
+color:#ff77bb;
+}
+
+.counterText{
+opacity:.8;
+margin-bottom:30px;
+}
+
+.timeBox{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+}
+
+.time{
+width:120px;
+padding:25px;
+border-radius:20px;
+background:rgba(255,255,255,.10);
+backdrop-filter:blur(15px);
+box-shadow:0 0 20px rgba(255,255,255,.2);
+}
+
+.time span{
+font-size:42px;
+font-weight:bold;
+color:#ff77bb;
+display:block;
+}
+
+.time small{
+font-size:18px;
+}
+#letter{
+padding:80px 20px;
+display:flex;
+justify-content:center;
+}
+
+.letterBox{
+max-width:900px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(20px);
+padding:40px;
+border-radius:25px;
+line-height:2;
+font-size:20px;
+box-shadow:0 0 40px rgba(255,255,255,.12);
+}
+
+.letterBox h1{
+font-family:'Great Vibes',cursive;
+font-size:55px;
+margin-bottom:25px;
+color:#ff7ab6;
+}
+
+#gift{
+padding:80px 20px;
+text-align:center;
+}
+
+#gift button{
+padding:18px 45px;
+font-size:22px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:#ff4da6;
+color:white;
+transition:.35s;
+}
+
+#gift button:hover{
+transform:scale(1.1);
+box-shadow:0 0 30px #ff4da6;
+}
+
+#finalMessage{
+display:none;
+padding:120px 20px;
+text-align:center;
+animation:fadeIn 2s;
+}
+
+#finalMessage h1{
+font-size:60px;
+color:#ff77bb;
+text-shadow:0 0 25px #ff77bb;
+font-family:'Great Vibes',cursive;
+}
+
+#finalMessage p{
+margin-top:20px;
+font-size:22px;
+}
+
+.musicButton{
+position:fixed;
+right:20px;
+bottom:20px;
+width:70px;
+height:70px;
+border-radius:50%;
+background:#ff4da6;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:32px;
+cursor:pointer;
+box-shadow:0 0 25px #ff4da6;
+z-index:999;
+}
+
+#stars,
+#hearts,
+#petals{
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+}
+
+#stars{
+background:url("https://www.transparenttextures.com/patterns/stardust.png");
+opacity:.45;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.2);}
+100%{transform:scale(1);}
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes hideLoader{
+0%,85%{
+opacity:1;
+visibility:visible;
+}
+100%{
+opacity:0;
+visibility:hidden;
+}
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:45px;
+}
+
+.hero span{
+font-size:60px;
+}
+
+.photoCard{
+width:90%;
+}
+
+.time{
+width:90px;
+padding:18px;
+}
+
+.time span{
+font-size:30px;
+}
+
+.letterBox{
+font-size:17px;
+padding:25px;
+}
+
+#finalMessage h1{
+font-size:42px;
+}
+
